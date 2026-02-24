@@ -7,8 +7,8 @@ const _inter = Inter({ subsets: ['latin'], variable: '--font-inter' })
 const _spaceGrotesk = Space_Grotesk({ subsets: ['latin'], variable: '--font-space-grotesk' })
 
 export const metadata: Metadata = {
-  title: 'GelFrio Argentina | Geles Refrigerantes Industriales',
-  description: 'Fabricantes de geles refrigerantes para cadena de frio. Soluciones industriales RS, RG y TB para laboratorios, alimentos y logistica en Argentina.',
+  title: 'FRI O PACK | Geles Refrigerantes Industriales',
+  description: 'FRI O PACK - Fabricantes de geles refrigerantes para cadena de frio. Soluciones industriales RS, RG y TB para laboratorios, alimentos y logistica en Argentina.',
   icons: {
     icon: [
       {

@@ -1,7 +1,8 @@
 "use client"
 
 import { useState } from "react"
-import { Menu, X, Snowflake } from "lucide-react"
+import { Menu, X } from "lucide-react"
+import Image from "next/image"
 
 const navLinks = [
   { href: "#inicio", label: "Inicio" },
@@ -17,11 +18,17 @@ export function Navbar() {
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-card/80 backdrop-blur-md border-b border-border">
-      <nav className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4">
-        <a href="#inicio" className="flex items-center gap-2">
-          <Snowflake className="h-7 w-7 text-primary" strokeWidth={2.5} />
+      <nav className="mx-auto flex max-w-7xl items-center justify-between px-6 py-3">
+        <a href="#inicio" className="flex items-center gap-3">
+          <Image
+            src="/images/logo.png"
+            alt="FRI O PACK logo"
+            width={44}
+            height={44}
+            className="h-11 w-11 rounded-full object-cover"
+          />
           <span className="text-xl font-bold tracking-tight text-foreground" style={{ fontFamily: 'var(--font-heading)' }}>
-            GelFrio
+            FRI O PACK
           </span>
         </a>
 

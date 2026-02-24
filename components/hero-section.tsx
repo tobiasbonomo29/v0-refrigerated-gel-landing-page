@@ -20,7 +20,7 @@ export function HeroSection() {
           <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-[oklch(0.99_0_0/0.15)] bg-[oklch(0.99_0_0/0.08)] px-4 py-1.5 backdrop-blur-sm">
             <ThermometerSnowflake className="h-4 w-4 text-[oklch(0.7_0.1_210)]" />
             <span className="text-sm font-medium text-[oklch(0.85_0.04_220)]">
-              Fabricantes de geles refrigerantes en Argentina
+              FRI O PACK - Geles refrigerantes industriales
             </span>
           </div>
 

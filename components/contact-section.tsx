@@ -49,7 +49,7 @@ export function ContactSection() {
                     Direccion
                   </p>
                   <p className="text-sm text-muted-foreground">
-                    Parque Industrial, Buenos Aires, Argentina
+                    Blanco Encalada 80, Villa Martelli, Buenos Aires
                   </p>
                 </div>
               </div>
@@ -59,9 +59,9 @@ export function ContactSection() {
                 </div>
                 <div>
                   <p className="text-sm font-semibold text-foreground">Email</p>
-                  <p className="text-sm text-muted-foreground">
-                    ventas@gelfrio.com.ar
-                  </p>
+                  <a href="mailto:friopack4@gmail.com" className="text-sm text-muted-foreground hover:text-primary transition-colors">
+                    friopack4@gmail.com
+                  </a>
                 </div>
               </div>
               <div className="flex items-start gap-4">
@@ -72,9 +72,9 @@ export function ContactSection() {
                   <p className="text-sm font-semibold text-foreground">
                     Telefono
                   </p>
-                  <p className="text-sm text-muted-foreground">
-                    +54 11 1234-5678
-                  </p>
+                  <a href="tel:+5491164360896" className="text-sm text-muted-foreground hover:text-primary transition-colors">
+                    +54 9 11 6436-0896
+                  </a>
                 </div>
               </div>
             </div>
@@ -154,7 +154,7 @@ export function ContactSection() {
                     <input
                       id="telefono"
                       type="tel"
-                      placeholder="+54 11 1234-5678"
+                      placeholder="+54 9 11 XXXX-XXXX"
                       className="rounded-lg border border-input bg-background px-4 py-2.5 text-sm text-foreground placeholder:text-muted-foreground focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary"
                     />
                   </div>

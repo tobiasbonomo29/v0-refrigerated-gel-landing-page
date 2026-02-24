@@ -11,7 +11,7 @@ export function AboutSection() {
             <div className="overflow-hidden rounded-2xl">
               <Image
                 src="/images/about-factory.jpg"
-                alt="Planta de produccion de geles refrigerantes GelFrio"
+                alt="Planta de produccion de geles refrigerantes FRI O PACK"
                 width={640}
                 height={480}
                 className="h-auto w-full object-cover"
@@ -45,14 +45,15 @@ export function AboutSection() {
               </span>
             </h2>
             <p className="mt-6 leading-relaxed text-muted-foreground">
-              Desde nuestra planta en Argentina, fabricamos geles refrigerantes
-              que cumplen con los estandares mas exigentes de la industria.
-              Nuestro compromiso es garantizar la integridad termica de sus
-              productos durante el transporte y almacenamiento.
+              Desde nuestra planta en Villa Martelli, Buenos Aires, fabricamos
+              geles refrigerantes que cumplen con los estandares mas exigentes
+              de la industria. Nuestro compromiso es garantizar la integridad
+              termica de sus productos durante el transporte y almacenamiento.
             </p>
             <p className="mt-4 leading-relaxed text-muted-foreground">
               Con una capacidad de produccion que abarca todas las lineas RS, RG
-              y TB, ofrecemos soluciones a medida para empresas de todo el pais.
+              y TB, FRI O PACK ofrece soluciones a medida para empresas de todo
+              el pais.
             </p>
 
             <div className="mt-10 grid gap-6 sm:grid-cols-3">

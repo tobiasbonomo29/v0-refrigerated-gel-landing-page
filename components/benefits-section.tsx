@@ -45,7 +45,7 @@ export function BenefitsSection() {
             style={{ fontFamily: 'var(--font-heading)' }}
           >
             <span className="text-balance">
-              Por que elegir GelFrio
+              Por que elegir FRI O PACK
             </span>
           </h2>
         </div>
