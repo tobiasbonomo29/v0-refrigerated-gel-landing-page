@@ -1,5 +1,6 @@
-import Image from "next/image"
 import { MapPin, Mail, Phone } from "lucide-react"
+
+const basePath = process.env.NODE_ENV === 'production' ? '/v0-refrigerated-gel-landing-page' : ''
 
 export function Footer() {
   return (
@@ -9,8 +10,8 @@ export function Footer() {
           {/* Brand */}
           <div className="flex flex-col gap-4">
             <div className="flex items-center gap-3">
-              <Image
-                src="/images/logo.png"
+              <img
+                src={`${basePath}/images/logo.png`}
                 alt="FRI O PACK logo"
                 width={36}
                 height={36}

@@ -1,16 +1,15 @@
 import { ArrowRight, ThermometerSnowflake } from "lucide-react"
-import Image from "next/image"
+
+const basePath = process.env.NODE_ENV === 'production' ? '/v0-refrigerated-gel-landing-page' : ''
 
 export function HeroSection() {
   return (
     <section id="inicio" className="relative min-h-screen flex items-center overflow-hidden">
       {/* Background image */}
-      <Image
-        src="/images/hero-bg.jpg"
+      <img
+        src={`${basePath}/images/hero-bg.jpg`}
         alt=""
-        fill
-        className="object-cover"
-        priority
+        className="absolute inset-0 w-full h-full object-cover"
       />
       {/* Overlay */}
       <div className="absolute inset-0 bg-gradient-to-r from-[oklch(0.14_0.03_240/0.92)] via-[oklch(0.14_0.03_240/0.8)] to-[oklch(0.14_0.03_240/0.5)]" />

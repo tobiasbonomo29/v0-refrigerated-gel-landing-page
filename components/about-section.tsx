@@ -1,5 +1,6 @@
-import Image from "next/image"
 import { Shield, Factory, Award } from "lucide-react"
+
+const basePath = process.env.NODE_ENV === 'production' ? '/v0-refrigerated-gel-landing-page' : ''
 
 export function AboutSection() {
   return (
@@ -9,8 +10,8 @@ export function AboutSection() {
           {/* Image side */}
           <div className="relative">
             <div className="overflow-hidden rounded-2xl">
-              <Image
-                src="/images/about-factory.jpg"
+              <img
+                src={`${basePath}/images/about-factory.jpg`}
                 alt="Planta de produccion de geles refrigerantes FRI O PACK"
                 width={640}
                 height={480}
