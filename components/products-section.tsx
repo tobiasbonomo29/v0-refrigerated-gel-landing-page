@@ -3,6 +3,8 @@
 import { useState } from "react"
 import { Snowflake, Package } from "lucide-react"
 
+const basePath = process.env.NODE_ENV === 'production' ? '/v0-refrigerated-gel-landing-page' : ''
+
 type ProductLine = "all" | "RS" | "RG" | "TB"
 
 interface Product {
@@ -11,17 +13,18 @@ interface Product {
   name: string
   desc: string
   weight: string
+  image?: string
 }
 
 const products: Product[] = [
-  { code: "RS2", line: "RS", name: "RS2", desc: "Gel refrigerante rigido compacto", weight: "200g" },
-  { code: "RS3", line: "RS", name: "RS3", desc: "Gel refrigerante rigido estandar", weight: "300g" },
-  { code: "RS4", line: "RS", name: "RS4", desc: "Gel refrigerante rigido mediano", weight: "400g" },
-  { code: "RS5", line: "RS", name: "RS5", desc: "Gel refrigerante rigido grande", weight: "500g" },
-  { code: "RS6", line: "RS", name: "RS6", desc: "Gel refrigerante rigido XL", weight: "600g" },
+  { code: "RS2", line: "RS", name: "RS2", desc: "Gel refrigerante rigido compacto", weight: "200g", image: "RS2 FINAL.png" },
+  { code: "RS3", line: "RS", name: "RS3", desc: "Gel refrigerante rigido estandar", weight: "300g", image: "RS3 FINAL.png" },
+  { code: "RS4", line: "RS", name: "RS4", desc: "Gel refrigerante rigido mediano", weight: "400g", image: "RS4 FINAL.png" },
+  { code: "RS5", line: "RS", name: "RS5", desc: "Gel refrigerante rigido grande", weight: "500g", image: "RS5 FINAL.png" },
+  { code: "RS6", line: "RS", name: "RS6", desc: "Gel refrigerante rigido XL", weight: "600g", image: "RS6 FINAL.png" },
   { code: "RS7", line: "RS", name: "RS7", desc: "Gel refrigerante rigido XXL", weight: "700g" },
-  { code: "RG1", line: "RG", name: "RG1", desc: "Gel refrigerante flexible chico", weight: "250g" },
-  { code: "RG2", line: "RG", name: "RG2", desc: "Gel refrigerante flexible mediano", weight: "500g" },
+  { code: "RG1", line: "RG", name: "RG1", desc: "Gel refrigerante flexible chico", weight: "250g", image: "RG1 FINAL.png" },
+  { code: "RG2", line: "RG", name: "RG2", desc: "Gel refrigerante flexible mediano", weight: "500g", image: "RG2 FINAL.png" },
   { code: "RG3", line: "RG", name: "RG3", desc: "Gel refrigerante flexible grande", weight: "750g" },
   { code: "TB1", line: "TB", name: "TB1", desc: "Tubo refrigerante compacto", weight: "150g" },
   { code: "TB2", line: "TB", name: "TB2", desc: "Tubo refrigerante estandar", weight: "300g" },
@@ -98,16 +101,29 @@ export function ProductsSection() {
               key={product.code}
               className="group relative flex flex-col rounded-xl border border-border bg-card p-6 transition-all hover:border-primary/30 hover:shadow-lg"
             >
-              {/* Product icon area */}
-              <div className="flex h-32 items-center justify-center rounded-lg bg-muted/60">
-                <div className="flex flex-col items-center gap-2">
-                  {product.line === "TB" ? (
-                    <Package className="h-10 w-10 text-primary/60" />
-                  ) : (
-                    <Snowflake className="h-10 w-10 text-primary/60" />
-                  )}
+              {/* Product image/icon area */}
+              <div className="relative flex h-40 items-center justify-center overflow-hidden rounded-lg bg-gradient-to-br from-muted/80 to-muted/40 group-hover:from-muted/60 group-hover:to-muted/20 transition-all">
+                {product.image ? (
+                  <>
+                    <img
+                      src={`${basePath}/images/${product.image}`}
+                      alt={product.code}
+                      className="h-full w-full object-contain p-4 group-hover:scale-105 transition-transform duration-300"
+                    />
+                    <div className="absolute inset-0 rounded-lg bg-gradient-to-t from-black/20 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
+                  </>
+                ) : (
+                  <div className="flex flex-col items-center gap-2">
+                    {product.line === "TB" ? (
+                      <Package className="h-10 w-10 text-primary/60" />
+                    ) : (
+                      <Snowflake className="h-10 w-10 text-primary/60" />
+                    )}
+                  </div>
+                )}
+                <div className="absolute bottom-2 right-2 rounded-lg bg-card/90 backdrop-blur-sm px-2.5 py-1.5 border border-border/50">
                   <span
-                    className="text-2xl font-bold text-foreground"
+                    className="text-lg font-bold text-foreground"
                     style={{ fontFamily: 'var(--font-heading)' }}
                   >
                     {product.code}
