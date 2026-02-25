@@ -26,7 +26,7 @@ const products: Product[] = [
   { code: "RG1", line: "RG", name: "RG1", desc: "Gel refrigerante flexible chico", weight: "250g", image: "RG1 FINAL.png" },
   { code: "RG2", line: "RG", name: "RG2", desc: "Gel refrigerante flexible mediano", weight: "500g", image: "RG2 FINAL.png" },
   { code: "RG3", line: "RG", name: "RG3", desc: "Gel refrigerante flexible grande", weight: "750g" },
-  { code: "TB1", line: "TB", name: "TB1", desc: "Tubo refrigerante compacto", weight: "150g" },
+  { code: "TB1", line: "TB", name: "TB1", desc: "Tubo refrigerante compacto", weight: "150g", image: "TB1.png" },
   { code: "TB2", line: "TB", name: "TB2", desc: "Tubo refrigerante estandar", weight: "300g" },
   { code: "TB3", line: "TB", name: "TB3", desc: "Tubo refrigerante grande", weight: "450g" },
   { code: "TB1X20", line: "TB", name: "TB1X20", desc: "Tubo refrigerante pack x20", weight: "20x150g" },
