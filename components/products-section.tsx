@@ -95,14 +95,14 @@ export function ProductsSection() {
         </div>
 
         {/* Product grid */}
-        <div className="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+        <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {filtered.map((product) => (
             <div
               key={product.code}
               className="group relative flex flex-col rounded-xl border border-border bg-card p-6 transition-all hover:border-primary/30 hover:shadow-lg"
             >
               {/* Product image/icon area */}
-              <div className="relative flex h-40 items-center justify-center overflow-hidden rounded-lg bg-gradient-to-br from-muted/80 to-muted/40 group-hover:from-muted/60 group-hover:to-muted/20 transition-all">
+              <div className="relative flex h-56 items-center justify-center overflow-hidden rounded-lg bg-gradient-to-br from-muted/80 to-muted/40 group-hover:from-muted/60 group-hover:to-muted/20 transition-all">
                 {product.image ? (
                   <>
                     <img
